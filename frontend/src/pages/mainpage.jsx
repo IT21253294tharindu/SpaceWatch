@@ -4,18 +4,23 @@ import Footer from "../components/footer";
 import Main from "../components/main";
 import SideBar from "../components/sidebar";
 import Header from "../components/header";
+import { useNavigate } from "react-router-dom";
 
 // Main Page component
 function MainPage() {
   const [data, setData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   function handleToggleModal() {
     setShowModal(!showModal);
   }
 
   useEffect(() => {
+    if (localStorage.getItem("token") === null) {
+      navigate("/");
+    }
     // Fetch data from NASA API
     async function fetchAPIData() {
       const url = "https://api.nasa.gov/planetary/apod";

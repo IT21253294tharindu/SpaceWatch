@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ParticlesBackground from "../components/particlesbackground";
 import Header from "../components/header";
+import { useNavigate } from "react-router-dom";
 
 // Mars Photos Page component
 export default function MarsPhotosPage() {
@@ -11,6 +12,7 @@ export default function MarsPhotosPage() {
     return storedPage ? parseInt(storedPage) : 1;
   });
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   // Typewriter effect
   const Typewriter = ({ text, speed }) => {
@@ -42,6 +44,9 @@ export default function MarsPhotosPage() {
   };
 
   useEffect(() => {
+    if (localStorage.getItem("token") === null) {
+      navigate("/");
+    }
     // Fetch Mars Photos data
     async function fetchAPIData() {
       setLoading(true);
