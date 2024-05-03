@@ -87,7 +87,7 @@ export default function Header() {
               <Menu.Button className="flex items-center justify-center">
                 <img
                   className="h-10 w-10 rounded-full"
-                  src="/images/profile.jpg"
+                  src="images/profile.jpg"
                   alt="Profile"
                 />
               </Menu.Button>
