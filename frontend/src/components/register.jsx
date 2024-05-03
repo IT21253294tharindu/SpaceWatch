@@ -42,7 +42,7 @@ const Register = () => {
 
     // Post request to register user
     axois
-      .post("spacewatch.railway.internal/user/register", newUser)
+      .post("https://spacewatch-production.up.railway.app/user/register", newUser)
       .then((res) => {
         //toast message for successful registration
         toast.success("user registered Successfully!", {
