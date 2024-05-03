@@ -138,7 +138,7 @@ export default function Header() {
               <img
                 className="h-8 w-auto"
                 src="images/Space.png"
-                alt="NASA-Logo"
+                alt="NASALogoPng"
               />
             </a>
             <button
