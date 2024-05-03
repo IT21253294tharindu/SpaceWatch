@@ -29,7 +29,7 @@ export default function Header() {
             <span className="sr-only ">SpaceWatch</span>
             <img
               className="h-16 w-auto"
-              src="images/space.png"
+              src="images/Space.png"
               alt="Space Watch"
               style={{ filter: "drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5))" }}
             />
