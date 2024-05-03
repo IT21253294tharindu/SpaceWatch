@@ -1,0 +1,40 @@
+.cursor-blink {
+  animation: blink-animation 1s infinite step-start;
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-container img {
+  transform: scaleX(-1); /*rotate the image horizontally*/
+  animation: spin 10s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
