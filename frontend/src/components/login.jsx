@@ -20,7 +20,7 @@ export default function Login() {
     };
 
     axois
-      .post("http://localhost:3000/user/login", user) //post request to the server
+      .post("spacewatch.railway.internal/user/login", user) //post request to the server
       .then((res) => {
         console.log(res.data);
         localStorage.setItem("token", res.data.token);
