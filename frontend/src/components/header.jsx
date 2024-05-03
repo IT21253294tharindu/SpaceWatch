@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className="bg-gradient-to-bl from-purple-900 to-black">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-32"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 md:px-20"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -34,7 +34,7 @@ export default function Header() {
               style={{ filter: "drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5))" }}
             />
           </a>
-          <span className="text-white text-lg font-semibold mr-2 flex flex-col justify-center items-center ml-2 ">
+          <span className="text-white text-xl font-semibold mr-2 flex flex-col justify-center items-center ml-2 ">
             SpaceWatch
           </span>
         </div>
@@ -80,7 +80,7 @@ export default function Header() {
           ) : null}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-2 lg:justify-end">
           {/*if user is logged in, show the menu to logout*/}
           {isLoggedIn ? (
             <Menu as="div" className="relative inline-block text-left">
@@ -131,7 +131,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-bl from-purple-900 to-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">NASA Logo</span>

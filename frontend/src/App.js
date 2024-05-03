@@ -5,7 +5,7 @@ import RegisterPage from "./pages/registerPage";
 import MainPage from "./pages/mainpage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MarsPhotosPage from "./pages/marsphotosPage";
-import EarthImagery from "./pages/earthImageryPage";
+import EarthImagery from "./pages/earthImageryPage2page";
 
 function App() {
   return (

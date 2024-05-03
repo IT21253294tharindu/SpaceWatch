@@ -4,8 +4,14 @@ import React from 'react'
 export default function Main(props) {
     const { data } = props
     return (
-        <div className="imgContainer">
-            <img src={data.hdurl} alt={data.title || 'bg-img'} className="bgImage" />
+        <div className="imgContainer relative w-full h-screen" style={{
+            backgroundImage: `url(${data.hdurl})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+        }} 
+        >
+           {/*  <img src={data.hdurl} alt={data.title || 'bg-img'} className="bgImage" /> */}
         </div>
     )
 }

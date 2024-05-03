@@ -3,7 +3,7 @@ import React from "react";
 //sidebar component to display the details of the image
 export default function SideBar({ handleToggleModal, data }) {
   return (
-    <div className="sidebar fixed inset-0 flex justify-center items-center z-50">
+    <div className="sidebar fixed inset-0 flex justify-center items-center px-2 z-50">
       <div
         onClick={handleToggleModal}
         className="sidebarOverlay fixed inset-0 bg-black opacity-10"

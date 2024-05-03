@@ -144,7 +144,7 @@ export default function MarsPhotosPage() {
             <p className="text-center justify-center">Loading...</p>
           )}
         </div>
-        <div className="flex justify-center mt-4">
+        <div className=" flex flex-wrap gap-2 justify-center mt-4">
           <button
             onClick={handlePrevPage}
             className={`${
