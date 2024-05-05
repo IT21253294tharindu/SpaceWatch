@@ -7,16 +7,12 @@ import { useNavigate } from "react-router-dom";
 
 // Register component
 const Register = () => {
-  /* const [typedText, setTypedText] = useState("");
-  const textToType = "   Register Now"; */
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
-
 
   // Typewriter effect
   const Typewriter = ({ text, speed }) => {
@@ -47,7 +43,6 @@ const Register = () => {
     return displayText;
   };
 
-
   const submitHandler = async (e) => {
     e.preventDefault();
     console.log("submit");
@@ -74,7 +69,10 @@ const Register = () => {
 
     // Post request to register user
     axois
-      .post("https://spacewatch-production.up.railway.app/user/register", newUser)
+      .post(
+        "https://spacewatch-production.up.railway.app/user/register",
+        newUser
+      )
       .then((res) => {
         //toast message for successful registration
         toast.success("user registered Successfully!", {
@@ -98,24 +96,6 @@ const Register = () => {
       });
   };
 
- /*  useEffect(() => {
-    // Typing effect of register now text
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setTypedText((prevText) => {
-        if (index < textToType.length) {
-          return prevText + textToType[index];
-        } else {
-          clearInterval(typingInterval);
-          return prevText;
-        }
-      });
-      index++;
-    }, 200);
-
-    return () => clearInterval(typingInterval);
-  }, [textToType]); */
-
   return (
     <>
       <section className="grid grid-cols-2 gap-8 ">
@@ -130,7 +110,7 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-center md:p-16">
               <p className="text-7xl font-medium font-serif text-center text-white gradient-text">
-                <Typewriter text="   Register Now" />
+                <Typewriter text="   Register Now" />{" "}
                 <span className="cursor-blink gradient-text">|</span>
               </p>
             </div>
