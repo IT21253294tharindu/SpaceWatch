@@ -25,7 +25,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only ">SpaceWatch</span>
             <img
               className="h-16 w-auto"
@@ -33,7 +33,7 @@ export default function Header() {
               alt="Space Watch"
               style={{ filter: "drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5))" }}
             />
-          </a>
+          </Link>
           <span className="text-white text-xl font-semibold mr-2 flex flex-col justify-center items-center ml-2 ">
             SpaceWatch
           </span>
