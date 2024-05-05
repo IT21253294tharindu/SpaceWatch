@@ -7,14 +7,46 @@ import { useNavigate } from "react-router-dom";
 
 // Register component
 const Register = () => {
-  const [typedText, setTypedText] = useState("");
-  const textToType = "   Register Now";
+  /* const [typedText, setTypedText] = useState("");
+  const textToType = "   Register Now"; */
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+
+
+  // Typewriter effect
+  const Typewriter = ({ text, speed }) => {
+    const displayText = useTypewriter(text, speed);
+
+    return <p>{displayText}</p>;
+  };
+
+  const useTypewriter = (text, speed = 200) => {
+    const [displayText, setDisplayText] = useState("");
+
+    useEffect(() => {
+      let i = 0;
+      const typingInterval = setInterval(() => {
+        if (i < text.length) {
+          setDisplayText((prevText) => prevText + text.charAt(i));
+          i++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, speed);
+
+      return () => {
+        clearInterval(typingInterval);
+      };
+    }, [text, speed]);
+
+    return displayText;
+  };
+
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -66,7 +98,7 @@ const Register = () => {
       });
   };
 
-  useEffect(() => {
+ /*  useEffect(() => {
     // Typing effect of register now text
     let index = 0;
     const typingInterval = setInterval(() => {
@@ -82,7 +114,7 @@ const Register = () => {
     }, 200);
 
     return () => clearInterval(typingInterval);
-  }, [textToType]);
+  }, [textToType]); */
 
   return (
     <>
@@ -98,7 +130,7 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-center md:p-16">
               <p className="text-7xl font-medium font-serif text-center text-white gradient-text">
-                {typedText}
+                <Typewriter text="   Register Now" />
                 <span className="cursor-blink gradient-text">|</span>
               </p>
             </div>
