@@ -37,7 +37,7 @@ export default function Login() {
           theme: "light",
         });
         const timer = setTimeout(() => {
-          navigate("/main"); //redirect to picture of the day page
+          navigate("/rover"); //redirect to picture of the day page
         }, 2000);
       })
       .catch((err) => {
